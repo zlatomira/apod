@@ -1,0 +1,55 @@
+body {
+	overflow-x: hidden;
+}
+
+.error {
+	color:  red;
+	text-align: center;
+}
+
+.apod {
+	text-align: center;
+}
+
+
+.apod > .apod__img {
+	max-width: 50%;
+	margin: 0 auto;
+}
+
+.apod > .apod__img > img {
+	width: 80%;
+}
+
+
+.loading {
+  position: relative;
+  background-color: #E2E2E2;
+
+ }
+
+ .loading.apod__img {
+ 	width: 80%;
+ 	height: 800px;
+ }
+
+
+.loading::after {
+	display: block;
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+    transform: translateX(-100%);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .2), transparent);
+    animation: loading 1.5s infinite;
+}
+
+
+
+
+@keyframes loading {
+  100% {
+    transform: translateX(100%);
+  }
+}
